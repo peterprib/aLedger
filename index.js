@@ -11,27 +11,15 @@ function account () {
 }
 module.exports = account;
 
-function debitBalanceAccount () {
-}
-module.exports = debitBalanceAccount;
-
-function creditBalanceAccount () {
-}
-module.exports = creditBalanceAccount;
-
-function creditBalanceAccount () {
-}
-module.exports = creditBalanceAccount;
-/*
-assetAccount:  debit balance
-liabilityAccount: credit balance
-equityAccount:  credit balance
-revenueAccount:  credit balance
-expenseAccount:  debit balance
-gainAccount: credit balance
-lossAccount: debit balance
-
-*/
+DebitBalanceAccount.prototype = new Account();
+CreditBalanceAccount.prototype = new Account();
+AssetAccount.prototype = new DebitBalanceAccount();
+liabilityAccount.prototype = new CrebitBalanceAccount();
+equityAccount.prototype = new CrebitBalanceAccount();
+revenueAccount.prototype = new CrebitBalanceAccount();
+expenseAccount.prototype = new DebitBalanceAccount();
+gainAccount.prototype = new CrebitBalanceAccount();
+lossAccount.prototype = new DebitBalanceAccount();
 
 function ChartOfAccounts {
 	this.newAssetAccount("Cash","Marketable Securities""Accounts Receivable","Prepaid Expenses""Inventory","Fixed Assets","Accumulated Depreciation (contra account)","Other Assets");
